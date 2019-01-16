@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-grid  *ngIf="products && products.length > 0">
+      <ion-item>
+        <ion-row>
+          <ion-col col-4>Name</ion-col>
+          <ion-col col-3>Price</ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item *ngFor="let item of products">
+        <ion-row>
+          <ion-col col-4>{{item.name}}</ion-col>
+          <ion-col col-3>{{item.price}}.-</ion-col>
+          <ion-col col-2>
+            <button ion-button full (click)="addToCart(item)">Add</button>
+          </ion-col>
+          <ion-col col-3>
+              <button ion-button full (click)="removeProduct(item)" color="danger">Remove</button>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-grid>
+    <ion-item text-center *ngIf="products && products.length == 0">
+      You do not have any product in cart
+    </ion-item>
+  </ion-list>
+</ion-content>
