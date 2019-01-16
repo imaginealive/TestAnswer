@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Set Interest Rate Page</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>Current Interest Rate is {{rateDisplay}}</ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Interest Rate</ion-label>
+      <ion-input type="number" placeholder="0.00" [(ngModel)]="rateInput"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button full round (click)="setInterest()">Update Interest Rate</button>
+</ion-content>

@@ -13,13 +13,13 @@ namespace api.Controllers
     [ApiController]
     public class LoanController : ControllerBase
     {
-        private IInterestLogic logic;
-        public LoanController() => logic = new InterestLogic();
+        public static IInterestLogic logic = new InterestLogic();
+
         // GET: api/Loan
         [HttpGet(Name = "Get Intrerest Rate")]
         public double Get()
         {
-            return logic.GetInterestRate();
+            return  logic.GetInterestRate();
         }
 
         // GET: api/Loan/5
