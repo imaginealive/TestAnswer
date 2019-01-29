@@ -1,7 +1,11 @@
-- Question 1 on Loan Folder
+﻿- Question 1 on Loan Folder
 - Question 2 on Shopping Folder
 
-1. mobile = 10 - 1 = 9  api = 10  test = 5
-2. mobile = 25 - 5 = 20  api = 20 - 5 = 15  test = 10 - 2 = 8
+1. mobile = 10 - 1 = 9  หน้าคำนวณ ไม่มี %
+api = 10  เต็ม
+test = 5 เต็ม
+2. mobile = 25 - 5 = 20  คำนวณผิด + ux
+api = 20 - 5 = 15  คำนวณ
+ test = 10 - 2 = 8 ไม่มีคำนวณส่วนลด
 
 total 9+10+5+20+15+8 = 67
